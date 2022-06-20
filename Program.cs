@@ -8,7 +8,7 @@ namespace Task8
         {
             int hoursOfwaiting = 0;
             int minutesOfWaiting = 0;
-            int hour = 60;
+            int minutesInHour = 60;
             int timeOfReceipt = 10;
             int waitingTime;
 
@@ -16,10 +16,10 @@ namespace Task8
             int numberOfPersons = int.Parse(Console.ReadLine());
             waitingTime = timeOfReceipt * numberOfPersons;
 
-            if (waitingTime > hour)
+            if (waitingTime > minutesInHour)
             {
-                hoursOfwaiting = waitingTime / hour;
-                waitingTime -= hoursOfwaiting * hour;
+                hoursOfwaiting = waitingTime / minutesInHour;
+                waitingTime -= hoursOfwaiting * minutesInHour;
                 minutesOfWaiting = waitingTime;
                 Console.WriteLine($"Вы должы отстоять в очереди {hoursOfwaiting} часов и {minutesOfWaiting} минут ");
             }
